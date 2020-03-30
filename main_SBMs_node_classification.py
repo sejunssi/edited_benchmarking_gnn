@@ -146,7 +146,7 @@ def train_val_pipeline(MODEL_NAME, dataset, params, net_params, dirs):
         with tqdm(range(params['epochs'])) as t:
             header = ['epoch', 'epoch_train_losses', 'epoch_train_acc', 'epoch_val_losses', 'epoch_val_acc',
                       'epoch_test_losses', 'epoch_test_acc']
-            epoch = [i + 1 for i in range(len(epoch_train_losses))]
+            epochs = [i + 1 for i in range(len(t))]
             epoch_train_losses = []
             epoch_train_acc = []
             epoch_val_losses =[]
